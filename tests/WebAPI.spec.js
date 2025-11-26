@@ -1,5 +1,5 @@
 import { test, expect, request } from '@playwright/test';
-import { APIUtil } from './APIUtil.js';   // make sure path is correct
+import { APIUtil } from '../utils/APIUtil.js';   // make sure path is correct
 
 const payload = { 
   userEmail: "ksubhash30@gmail.com", 
@@ -8,7 +8,8 @@ const payload = {
 
 let token;
 let apiContext;
-
+//test.describe.configure({mode:'parallel'})  // for parallel exectuion
+//test.describe.configure({mode:'serial'})  // skip the following tests if any failure
 test.beforeAll(async () => {
   apiContext = await request.newContext();
 });

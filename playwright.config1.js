@@ -1,7 +1,6 @@
 // @ts-check
 import { chromium, defineConfig, devices } from '@playwright/test';
 import { trace } from 'console';
-import { permission } from 'process';
 
 /**
  * Read environment variables from file.
@@ -16,43 +15,18 @@ import { permission } from 'process';
  */
  const config=({
   testDir: './tests',  
-  retries:1,
-  worker:3,
   timeout: 30*1000,
   expect:{
     timeout:5000
   },
   reporter:'html',
-  projects:[
-    {
-    name:'firefox',    
-    use: {
+  use: {
     browserName:'firefox',
     headless:false,
     screenshot:'on',
-    trace:'retain-on-failure', 
-    video:'retain-on-failure',  
-    ...devices['iPhone 11'],
+    trace:'retain-on-failure',   
    
-  }
- },
-{  
-    name:'chrome',    
-    use: {
-    browserName:'chromium',
-    headless:false,
-    screenshot:'on',
-    trace:'retain-on-failure',
-    video:'retain-on-failure',
-    //...devices['iPhone 11'],
-    //viewport:{width:720,height:720}
-    ignoreHttpsErrors:true,  //ssl cert handling
-    permissions:['geolocation']//location permission handling
-  }
-}]
-
-  
-  
+  }, 
   
 });
 module.exports=config

@@ -1,5 +1,5 @@
 const {test,expect}= require("@playwright/test");
-test('Calendar selection',async({page})=>{
+test(' @calender Calendar selection',async({page})=>{
     await page.goto('https://rahulshettyacademy.com/seleniumPractise/#/offers');
     const date=26;
     const month=8;

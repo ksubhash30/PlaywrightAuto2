@@ -17,25 +17,25 @@ import { permission } from 'process';
  const config=({
   testDir: './tests',  
   retries:1,
-  worker:3,
+  worker:2,
   timeout: 30*1000,
   expect:{
     timeout:5000
   },
   reporter:'html',
   projects:[
-    {
+  /*  {
     name:'firefox',    
     use: {
-    browserName:'firefox',
+    browserName:'webkit',
     headless:false,
     screenshot:'on',
     trace:'retain-on-failure', 
     video:'retain-on-failure',  
-    ...devices['iPhone 11'],
+    //...devices['iPhone 11'],
    
   }
- },
+ },*/
 {  
     name:'chrome',    
     use: {

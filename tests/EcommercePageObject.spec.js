@@ -61,7 +61,7 @@ test(`End to End scenario for ecommerce nPage Object ${val.username}`, async ({ 
 
 })}
 
-customtest.only(`Data driven testing using Test fixture`, async ({ page,testData }) => {
+customtest(`Data driven testing using Test fixture`, async ({ page,testData }) => {
        
     const product = 'ZARA COAT 3';   
     const loginPage= new LoginPage(page);

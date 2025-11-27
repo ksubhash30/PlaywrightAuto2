@@ -13,7 +13,7 @@ import { trace } from 'console';
 /**
  * @see https://playwright.dev/docs/test-configuration
  */
- const config=({
+ const config2=({
   testDir: './tests',  
   timeout: 30*1000,
   expect:{
@@ -29,5 +29,5 @@ import { trace } from 'console';
   }, 
   
 });
-module.exports=config
+module.exports=config2
 

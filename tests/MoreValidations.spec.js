@@ -25,7 +25,7 @@ test('Hidden page validation', async ({ page }) => {
 
 })
 //visual testing comparing images
-test.only('match screen shot', async ({ page }) => {
+test('match screen shot', async ({ page }) => {
     await page.goto("https://google.com/");
     expect(await page.screenshot()).toMatchSnapshot('google.png');
 })

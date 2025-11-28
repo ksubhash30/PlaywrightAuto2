@@ -19,6 +19,7 @@ import { permission } from 'process';
   retries:1,
   worker:2,
   timeout: 30*1000,
+  headless:true,
   expect:{
     timeout:5000
   },
